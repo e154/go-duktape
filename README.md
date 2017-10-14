@@ -1,19 +1,17 @@
-# Duktape bindings for Go(Golang) [![wercker status](https://app.wercker.com/status/3a5bb2e639a4b4efaf4c8bf7cab7442d/s "wercker status")](https://app.wercker.com/project/bykey/3a5bb2e639a4b4efaf4c8bf7cab7442d) [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/olebedev/go-duktape?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-[Duktape](http://duktape.org/index.html) is a thin, embeddable javascript engine.
-Most of the [api](http://duktape.org/api.html) is implemented.
-The exceptions are listed [here](https://github.com/olebedev/go-duktape/blob/master/api.go#L1566).
+# Duktape bindings for Go(Golang) 
+
 
 ### Usage
 
 The package is fully go-getable, no need to install any external C libraries.  
-So, just type `go get gopkg.in/e154/go-duktape.v2` to install.
+So, just type `go get gopkg.in/e154/go-duktape.v3` to install.
 
 
 ```go
 package main
 
 import "fmt"
-import "gopkg.in/e154/go-duktape.v2"
+import "gopkg.in/e154/go-duktape.v3"
 
 func main() {
   ctx := duktape.New()
@@ -35,7 +33,7 @@ However, binding a Go function to the Javascript context is available:
 package main
 
 import "fmt"
-import "gopkg.in/e154/go-duktape.v2"
+import "gopkg.in/e154/go-duktape.v3"
 
 func main() {
   ctx := duktape.New()
@@ -60,7 +58,7 @@ There is a method to inject timers to the global scope:
 package main
 
 import "fmt"
-import "gopkg.in/e154/go-duktape.v2"
+import "gopkg.in/e154/go-duktape.v3"
 
 func main() {
   ctx := duktape.New()
@@ -93,7 +91,7 @@ Also you can `FlushTimers()`.
 
 ### Command line tool
 
-Install `go get gopkg.in/e154/go-duktape.v2/...`.  
+Install `go get gopkg.in/e154/go-duktape.v3/...`.  
 Execute file.js: `$GOPATH/bin/go-duk file.js`.
 
 ### Benchmarks
@@ -105,7 +103,7 @@ Execute file.js: `$GOPATH/bin/go-duk file.js`.
 |[GopherLua](https://github.com/yuin/gopher-lua/)|8.39s|
 |**go-duktape**|**9.80s**|
 
-More details are [here](https://github.com/olebedev/go-duktape/wiki/Benchmarks).
+More details are [here](https://github.com/e154/go-duktape/wiki/Benchmarks).
 
 ### Status
 
